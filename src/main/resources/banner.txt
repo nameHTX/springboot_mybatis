@@ -1,5 +1,4 @@
 ${AnsiColor.BRIGHT_YELLOW}
-Application Version: ${springboot_mybatis.version}
 Spring Boot Version: ${spring-boot.version}
    _____                  __
   /  _  \  __ __  _______/  |_  ____   ____
