@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  the code template created by smart-generator @author hermit @version 2.0 @date 2018-12-30 22:26:32 -->
+<mapper namespace="com.austen.mapper.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="com.austen.entity.Student">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <!-- 字段列表 -->
+    <sql id="Base_Column_List">
+        t.id,t.name
+    </sql>
+
+    <!-- 查询数量 -->
+    <select id="queryCount" resultType="java.lang.Integer">
+        select
+        count(*)
+        from student
+    </select>
+</mapper>

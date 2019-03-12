@@ -1,0 +1,22 @@
+#服务器端口号
+server:
+  port: 8080
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  banner:
+    location: classpath:banner.txt
+    charset: UTF-8
+#配置mybatis映射
+mybatis:
+  type-aliases-package: com.austen.entity
+  mapper-locations: classpath:mapper/*.xml
+#配置日志
+logging:
+  level:
+    com.austen: DEBUG
+  root: INFO
