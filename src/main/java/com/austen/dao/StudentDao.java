@@ -1,4 +1,4 @@
-package com.austen.mapper;
+package com.austen.dao;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import com.austen.entity.Student;
  */
 @Mapper
 @Repository
-public interface StudentMapper {
+public interface StudentDao {
 
     /**
      * 添加

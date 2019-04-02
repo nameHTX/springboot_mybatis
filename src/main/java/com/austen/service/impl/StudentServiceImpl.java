@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.austen.mapper.StudentMapper;
+import com.austen.dao.StudentDao;
 import com.austen.entity.Student;
 import com.austen.service.IStudentService;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,44 +18,44 @@ import org.springframework.transaction.annotation.Transactional;
 public class StudentServiceImpl implements IStudentService {
 
     @Autowired
-    private StudentMapper studentMapper;
+    private StudentDao studentDao;
 
     @Override
     public void add(String name) {
         if (null != name && !"".equals(name)) {
-            studentMapper.add(name);
+            studentDao.add(name);
         }
     }
 
     @Override
     public void del(Long id) {
         if (null != id && id != 0) {
-            studentMapper.del(id);
+            studentDao.del(id);
         }
     }
 
     @Override
     public void upd(Student student) {
         if (null != student && !"".equals(student)) {
-            studentMapper.upd(student);
+            studentDao.upd(student);
         }
     }
 
     @Override
     public Student get(Long id) {
         if (null != id && id != 0) {
-            return studentMapper.get(id);
+            return studentDao.get(id);
         }
         return null;
     }
 
     @Override
     public List<Student> list() {
-        return studentMapper.list();
+        return studentDao.list();
     }
 
     @Override
     public int queryCount() {
-        return studentMapper.queryCount();
+        return studentDao.queryCount();
     }
 }

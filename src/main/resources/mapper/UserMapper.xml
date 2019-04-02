@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--  the code template created by smart-generator @author hermit @version 2.0 @date 2018-12-30 22:26:32 -->
-<mapper namespace="com.austen.mapper.StudentMapper">
+<mapper namespace="com.austen.dao.StudentDao">
 
     <resultMap id="BaseResultMap" type="com.austen.entity.Student">
         <result column="id" property="id"/>
